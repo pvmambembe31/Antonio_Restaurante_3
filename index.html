@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mirante de Laranjeiras & Antônio Restaurante</title>
+<title>Mirante de Laranjeiras | Experiência Gastronômica</title>
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
+<header class="header">
+
+<div class="logo">
+Mirante de Laranjeiras
+</div>
+
+<nav>
+<a href="#experiencia">Experiência</a>
+<a href="#cardapio">Cardápio</a>
+<a href="#galeria">Espaço</a>
+<a href="#bairro">Bairro</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
 
 <section class="hero">
 
@@ -23,183 +37,142 @@
 <h1>Uma experiência gastronômica com vista para o Cristo Redentor</h1>
 
 <p>
-Sabores do Nordeste reinterpretados pela gastronomia contemporânea em um ambiente exclusivo no Mirante de Laranjeiras.
+Sabores tradicionais do nordeste brasileiro reinterpretados com técnicas da cozinha contemporânea.
 </p>
 
-<div class="buttons">
-
-<button class="btn btn-primary">Reservar Experiência</button>
-<button class="btn btn-secondary">Ver Cardápio</button>
-
-</div>
+<a href="#cardapio" class="btn">Ver Experiência</a>
 
 </div>
 
 </section>
 
-
-<section>
+<section id="experiencia" class="section">
 
 <h2>A Experiência</h2>
 
-<p>
-Mais do que um restaurante, o Mirante de Laranjeiras é uma experiência sensorial. Em um ambiente intimista com vista privilegiada para o Cristo Redentor, cada prato conecta as raízes da culinária nordestina com técnicas modernas da gastronomia contemporânea.
+<p class="center">
+O Mirante de Laranjeiras oferece uma experiência gastronômica exclusiva em um ambiente intimista, com vista privilegiada para o Cristo Redentor.
 </p>
 
 <div class="features">
 
 <div class="feature">
-<h3>Experiência Exclusiva</h3>
-<p>Vagas limitadas para um jantar intimista.</p>
+<h3>Cozinha Nordestina</h3>
+<p>Sabores autênticos reinterpretados com técnicas modernas.</p>
 </div>
 
 <div class="feature">
-<h3>Vista Panorâmica</h3>
-<p>Um dos cenários mais icônicos do Rio.</p>
+<h3>Vista Única</h3>
+<p>Uma das vistas mais impressionantes do Rio de Janeiro.</p>
 </div>
 
 <div class="feature">
-<h3>Culinária Autoral</h3>
-<p>Nordeste reinterpretado pela gastronomia moderna.</p>
-</div>
-
-<div class="feature">
-<h3>Drinks Autorais</h3>
-<p>Clássicos e criações exclusivas do bartender.</p>
+<h3>Drinks Exclusivos</h3>
+<p>Coquetelaria clássica e autoral preparada na hora.</p>
 </div>
 
 </div>
 
 </section>
 
-
-<section>
-
-<h2>O Espaço</h2>
-
-<div class="gallery">
-
-<img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1">
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
-<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
-<img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0">
-
-</div>
-
-</section>
-
-
-<section>
+<section id="cardapio" class="section dark">
 
 <h2>Cardápio</h2>
 
 <div class="menu-grid">
 
-<div class="menu-item" onclick="openModal('Baião de Dois Contemporâneo','Arroz cremoso com feijão verde, queijo coalho tostado e carne de sol confitada.')">
-
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c">
-
-<div class="menu-item-content">
-<h3>Baião de Dois Contemporâneo</h3>
-<p>Tradição nordestina reinventada.</p>
+<div class="menu-item" data-title="Carne de Sol Gourmet" data-desc="Carne de sol com purê de macaxeira e manteiga de garrafa." data-img="https://images.unsplash.com/photo-1555992336-03a23c6b8a09">
+<img src="https://images.unsplash.com/photo-1555992336-03a23c6b8a09">
+<h3>Carne de Sol Gourmet</h3>
 </div>
 
+<div class="menu-item" data-title="Camarão Nordestino" data-desc="Camarões grelhados com molho de coco e arroz de castanhas." data-img="https://images.unsplash.com/photo-1604908177522-429bb87a5c4b">
+<img src="https://images.unsplash.com/photo-1604908177522-429bb87a5c4b">
+<h3>Camarão Nordestino</h3>
 </div>
 
-
-<div class="menu-item" onclick="openModal('Camarão do Sertão','Camarões grelhados com purê de macaxeira e molho de coco.')">
-
-<img src="https://images.unsplash.com/photo-1604908176997-431f0a0c0d24">
-
-<div class="menu-item-content">
-<h3>Camarão do Sertão</h3>
-<p>Sabores do litoral e do sertão.</p>
-</div>
-
-</div>
-
-
-<div class="menu-item" onclick="openModal('Cartola Gourmet','Banana caramelizada, queijo manteiga e sorvete artesanal.')">
-
-<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
-
-<div class="menu-item-content">
-<h3>Cartola Gourmet</h3>
-<p>Sobremesa clássica nordestina.</p>
-</div>
-
+<div class="menu-item" data-title="Drink Mirante" data-desc="Drink autoral criado especialmente para a experiência." data-img="https://images.unsplash.com/photo-1514361892635-e955a6b89c5c">
+<img src="https://images.unsplash.com/photo-1514361892635-e955a6b89c5c">
+<h3>Drink Mirante</h3>
 </div>
 
 </div>
 
 </section>
 
+<section id="galeria" class="section">
 
-<section>
+<h2>O Espaço</h2>
 
-<h2>Experiência para hóspedes</h2>
+<div class="gallery">
 
-<p>
-Hóspedes do Airbnb Mirante de Laranjeiras podem contratar experiências privadas como almoço no deck da piscina, jantares exclusivos e eventos personalizados.
-</p>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+<img src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
+<img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9">
+
+</div>
 
 </section>
 
-
-<section>
+<section id="bairro" class="section dark">
 
 <h2>Descubra Laranjeiras</h2>
 
-<div class="recommendations">
-
-<div class="place">
-<h3>Parque Guinle</h3>
-<p>Um dos jardins históricos mais bonitos do Rio.</p>
-</div>
-
-<div class="place">
-<h3>Palácio Guanabara</h3>
-<p>Sede do governo estadual e marco histórico.</p>
-</div>
-
-<div class="place">
-<h3>Largo do Machado</h3>
-<p>Centro cultural e gastronômico do bairro.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="cta">
-
-<h2>Reserve sua experiência gastronômica</h2>
-
-<div class="buttons">
-
-<button class="btn btn-primary">WhatsApp</button>
-<button class="btn btn-secondary">Instagram</button>
-<button class="btn btn-secondary">Airbnb</button>
-
-</div>
-
-</section>
-
-
-<footer class="footer">
-
-<p>
-Mirante de Laranjeiras<br>
-R. Alm. Salgado, 308 – apt 501<br>
-Laranjeiras – Rio de Janeiro
+<p class="center">
+Explore um dos bairros mais charmosos do Rio de Janeiro.
 </p>
 
-</footer>
+<div class="features">
 
+<div class="feature">
+<h3>Parque Guinle</h3>
+<p>Um dos parques históricos mais bonitos da cidade.</p>
+</div>
 
-<div class="modal" id="modal">
-<div class="modal-box" id="modalBox"></div>
+<div class="feature">
+<h3>Palácio Guanabara</h3>
+<p>Sede histórica do governo estadual.</p>
+</div>
+
+<div class="feature">
+<h3>Arquitetura Histórica</h3>
+<p>Ruas charmosas e casarões tradicionais.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contato" class="section">
+
+<h2>Contato</h2>
+
+<div class="contact-links">
+
+<a href="#">WhatsApp</a>
+<a href="#">Instagram</a>
+<a href="#">Airbnb</a>
+
+</div>
+
+<p class="address">
+R. Alm. Salgado, 308 - apt 501 - Laranjeiras
+</p>
+
+</section>
+
+<div id="popup" class="popup">
+
+<div class="popup-content">
+
+<img id="popup-img">
+
+<h3 id="popup-title"></h3>
+
+<p id="popup-desc"></p>
+
+</div>
+
 </div>
 
 <script src="js/script.js"></script>

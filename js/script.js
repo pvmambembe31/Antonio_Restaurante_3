@@ -1,23 +1,30 @@
-function openModal(title,desc){
+const items = document.querySelectorAll(".menu-item")
+const popup = document.getElementById("popup")
 
-let modal=document.getElementById("modal")
-let box=document.getElementById("modalBox")
+const title = document.getElementById("popup-title")
+const desc = document.getElementById("popup-desc")
+const img = document.getElementById("popup-img")
 
-box.innerHTML=`
+items.forEach(item => {
 
-<h2>${title}</h2>
-<p>${desc}</p>
+item.addEventListener("click", () => {
 
-`
+title.innerText = item.dataset.title
+desc.innerText = item.dataset.desc
+img.src = item.dataset.img
 
-modal.classList.add("active")
+popup.style.display = "flex"
 
-}
+})
 
-document.getElementById("modal").addEventListener("click",function(e){
+})
 
-if(e.target.id==="modal"){
-this.classList.remove("active")
+popup.addEventListener("click", (e) => {
+
+if(e.target === popup){
+
+popup.style.display = "none"
+
 }
 
 })
