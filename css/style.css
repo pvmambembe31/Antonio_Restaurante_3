@@ -466,7 +466,10 @@ h1, h2, h3, h4, h5, h6 {
 .carousel-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .carousel-item p {
@@ -638,40 +641,48 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-lg);
 }
 
-.contact-icon {
-  width: 60px;
-  height: 60px;
+.contact-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 15px;
-  color: var(--primary);
   transition: all 0.3s ease;
 }
 
-.contact-card:hover .contact-icon {
-  transform: scale(1.2);
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  color: white;
 }
 
-.whatsapp-card .contact-icon {
-  color: #25D366;
+.whatsapp-card .contact-icon-wrapper {
+  background: #25D366;
 }
 
-.whatsapp-card:hover .contact-icon {
-  color: #1fa857;
+.whatsapp-card:hover .contact-icon-wrapper {
+  background: #1fa857;
+  transform: scale(1.1);
 }
 
-.airbnb-card .contact-icon {
-  color: #FF5A5F;
+.airbnb-card .contact-icon-wrapper {
+  background: #FF5A5F;
 }
 
-.airbnb-card:hover .contact-icon {
-  color: #e63946;
+.airbnb-card:hover .contact-icon-wrapper {
+  background: #e63946;
+  transform: scale(1.1);
 }
 
-.instagram-card .contact-icon {
-  color: #E4405F;
+.instagram-card .contact-icon-wrapper {
+  background: #E4405F;
 }
 
-.instagram-card:hover .contact-icon {
-  color: #c13584;
+.instagram-card:hover .contact-icon-wrapper {
+  background: #c13584;
+  transform: scale(1.1);
 }
 
 .contact-label {
