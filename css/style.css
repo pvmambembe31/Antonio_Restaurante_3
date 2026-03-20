@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - 0px));
   }
 }
 
@@ -482,6 +482,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-info {
   text-align: center;
+}
+
+/* Instagram Logo Link */
+.instagram-logo-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.instagram-logo {
+  width: 60px;
+  height: 60px;
+  color: var(--primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.instagram-logo-link:hover .instagram-logo {
+  color: var(--secondary);
+  transform: scale(1.15) rotate(-5deg);
+  filter: drop-shadow(0 0 10px rgba(124, 58, 237, 0.5));
 }
 
 /* Hospedagem Section */

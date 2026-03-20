@@ -9,6 +9,45 @@ const popupTitle = document.getElementById('popup-title');
 const popupDesc = document.getElementById('popup-desc');
 const popupClose = document.querySelector('.popup-close');
 const menuItems = document.querySelectorAll('.menu-item');
+const carouselTrack = document.getElementById('carouselTrack');
+
+// ============================================
+// Carregar Imagens do Carrossel
+// ============================================
+function loadCarouselImages() {
+  // Array de imagens que existem na pasta assets
+  const images = [
+    { name: 'foto1.jpg', label: 'Mirante Vista' },
+    { name: 'foto2.jpg', label: 'Ambiente' },
+    { name: 'foto3.jpg', label: 'Gastronomia' },
+    { name: 'foto4.jpg', label: 'Drinks' },
+    { name: 'foto5.jpg', label: 'Hospedagem' }
+  ];
+
+  // Limpar carrossel
+  carouselTrack.innerHTML = '';
+
+  // Adicionar imagens ao carrossel
+  images.forEach((image) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.className = 'carousel-item';
+    carouselItem.innerHTML = `
+      <img src="assets/${image.name}" alt="${image.label}" onerror="this.src='https://via.placeholder.com/1200x800?text=${image.label}'">
+      <p>${image.label}</p>
+    `;
+    carouselTrack.appendChild(carouselItem);
+  });
+
+  // Duplicar as imagens para criar efeito contínuo
+  const items = carouselTrack.querySelectorAll('.carousel-item');
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    carouselTrack.appendChild(clone);
+  });
+}
+
+// Carregar imagens ao iniciar
+loadCarouselImages();
 
 // ============================================
 // Menu Item Click Handler
@@ -22,6 +61,9 @@ menuItems.forEach(item => {
     popupTitle.textContent = title;
     popupDesc.textContent = desc;
     popupImg.src = img;
+    popupImg.onerror = function() {
+      this.src = 'https://via.placeholder.com/500x400?text=' + title;
+    };
     popup.classList.add('active');
 
     // Prevent scroll
@@ -120,9 +162,9 @@ window.addEventListener('scroll', function() {
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href').slice(1) === current) {
-      link.style.color = 'var(--warm-gold)';
+      link.style.color = 'var(--primary)';
     } else {
-      link.style.color = 'var(--charcoal)';
+      link.style.color = 'var(--text-secondary)';
     }
   });
 });
@@ -168,4 +210,5 @@ if ('IntersectionObserver' in window) {
 // ============================================
 // Initialization
 // ============================================
-console.log('✨ Antônio Restaurante - Site Carregado com Sucesso!');
+console.log('✨ Mirante de Laranjeiras - Site Carregado com Sucesso!');
+console.log('📁 Pasta assets pronta para receber imagens');
