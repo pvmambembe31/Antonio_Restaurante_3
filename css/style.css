@@ -1230,3 +1230,186 @@ h1, h2, h3, h4, h5, h6 {
     height: 300px;
   }
 }
+
+
+/* ============================================
+   FOOTER STYLES
+   ============================================ */
+
+.footer {
+  background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 60px 20px 20px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #FFFFFF;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+}
+
+.footer-section a {
+  color: var(--tertiary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.footer-section a:hover {
+  color: var(--tertiary-light);
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link svg {
+  width: 28px;
+  height: 28px;
+  color: #FFFFFF;
+}
+
+.social-link.whatsapp {
+  color: #25D366;
+  border-color: #25D366;
+}
+
+.social-link.whatsapp:hover {
+  background: #25D366;
+  color: #FFFFFF;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+
+.social-link.instagram {
+  color: #E4405F;
+  border-color: #E4405F;
+}
+
+.social-link.instagram:hover {
+  background: #E4405F;
+  color: #FFFFFF;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(228, 64, 95, 0.3);
+}
+
+.social-link.airbnb {
+  color: #FF5A5F;
+  border-color: #FF5A5F;
+}
+
+.social-link.airbnb:hover {
+  background: #FF5A5F;
+  color: #FFFFFF;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 90, 95, 0.3);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+/* Instagram Link in Carousel */
+.instagram-link {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #E4405F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(228, 64, 95, 0.3);
+}
+
+.instagram-link:hover {
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 8px 25px rgba(228, 64, 95, 0.5);
+}
+
+.instagram-link svg {
+  width: 35px;
+  height: 35px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer {
+    padding: 40px 20px 15px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.5rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.1rem;
+  }
+}
